@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Premiers usages de javascript</title>
+</head>
+<body>
+<h1>Exemple des premiers usages de Javascript</h1>
+<div id="block" style="display:none;">
+    <h2>Un bloc de texte</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet enim ut accumsan bibendum. In vitae massa at lacus vestibulum volutpat. Proin et magna ipsum. Donec non mauris vel purus porta viverra eget et ligula. Donec malesuada lacus in felis tempor, et dictum lectus tempus. Morbi fringilla semper erat laoreet ornare. Nulla malesuada purus vitae nulla feugiat aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<button type="button" onclick="onChangeTitleColor('blue');">Passez le titre en bleu</button>
+<button type="button" onclick="onChangeTitleColor('red');">Passez le titre en rouge</button>
+<button type="button" onclick="alert('Message d\'alerte');">Afficher une alerte</button>
+<button type="button" id="blockShow" onclick="onShowBlock()">Afficher du contenu</button>
+<button type="button" id="blockHide" onclick="onHideBlock()" style="display:none;">Cacher du contenu</button>
+
+<script>
+    function onChangeTitleColor(color){
+        var titre = document.getElementsByTagName('h1')[0];
+        titre.style.color = color;
+    }
+
+    function onShowBlock(){
+        var block = document.getElementById('block');
+        var showTrigger = document.getElementById('blockShow');
+        var hideTrigger = document.getElementById('blockHide');
+        block.style.display = 'block';
+        showTrigger.style.display = 'none';
+        hideTrigger.style.display = 'inline';
+    }
+
+    function onHideBlock(){
+        var block = document.getElementById('block');
+        var showTrigger = document.getElementById('blockShow');
+        var hideTrigger = document.getElementById('blockHide');
+        block.style.display = 'none';
+        showTrigger.style.display = 'inline';
+        hideTrigger.style.display = 'none';
+
+    }
+</script>
+</body>
+</html>
