@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemple de chargement AJAX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Exemple de chargement de contenu dynamique avec AJAX</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="button" onclick="onLoadContent()">Charger le contenu</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" id="content">
+            <h1></h1>
+            <p></p>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    function onLoadContent(){
+        var downloadedContent = '';
+        $.ajax('./content/demo_data.json',{
+            'type': 'GET',
+            'processData': false,
+            'contentType': 'application/json' //typically 'application/x-www-form-urlencoded', but the service you are calling may expect 'text/json'... check with the service to see what they expect as content-type in the HTTP header.
+        }).then((content) => {
+            downloadedContent = content;
+            $('#content p').html(downloadedContent['html']);
+            $('#content h1').html(downloadedContent['title']);
+        });
+    }
+</script>
+
+</body>
+</html>

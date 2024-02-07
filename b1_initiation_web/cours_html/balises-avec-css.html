@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quelques balises</title>
+    <style>
+        /*
+        Avec CSS, on peut sélectionner les balises HTML sur lesquelles on souhaite appliquer un style :
+        */
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        h3 {
+            color: green;
+        }
+
+        h4 {
+            color: orange;
+        }
+
+
+
+        p {
+            font-size: 18px;
+        }
+
+        div p {
+            font-style: italic;
+        }
+
+        a {
+            text-decoration: none;
+            color: purple;
+        }
+
+        ul li {
+            list-style-type: square;
+        }
+
+        /*
+        On peut sélectionner les classes  sur lesquelles on souhaite appliquer un style.
+        Une classe peut s'appliquer à plusieurs éléments
+        */
+
+        .font-bold{
+            font-weight: bold;
+        }
+
+        /*
+        On peut sélectionner les identifiants  sur lesquelles on souhaite appliquer un style.
+        Un identifiant ne s'appplique qu'à UN SEUL élément HTML de la page
+        */
+
+        #underline{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1>Titre niveau 1</h1>
+<h2>Titre niveau 2</h2>
+<h3>Titre niveau 3</h3>
+<h4>Titre niveau 4</h4>
+<p class="font-bold">Paragraphe</p>
+<p id="underline">Paragraphe</p>
+<!--On peut aussi appliquer un style directement à l'intérieur de la balise HTML -->
+<p style="font-size: 24px;">Paragraphe</p>
+<div>
+    <p>Ceci est un paragraphe, à l'intérieur d'une "div".</p>
+</div>
+<a href="https://www.google.com">Ceci est un lien vers google.com</a>
+<ul>
+    <li>Ceci est un item d'une "liste non-ordonnée"</li>
+    <li>Ceci est un autre item</li>
+</ul>
+
+
+
+
+</body>
+</html>
