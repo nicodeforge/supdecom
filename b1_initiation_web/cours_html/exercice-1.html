@@ -6,18 +6,42 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quelques balises</title>
+    <style>
+        .red{
+            color: red;
+        }
+
+        .green{
+            color: green;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+
+        a{
+            color: black;
+        }
+
+        a:hover{
+            color: orange;
+        }
+
+        ul li{
+            list-style: none;
+        }
+
+    </style>
 </head>
 <body>
-<h1>Passez ce titre en rouge</h1>
-<h2>Passez ce titre en rouge, et souligné</h2>
-<h3>Passez ce titre en vert, et souligné</h3>
+<h1 class="red">Passez ce titre en rouge</h1>
+<h2 class="red underline">Passez ce titre en rouge, et souligné</h2>
+<h3 class="green underline">Passez ce titre en vert, et souligné</h3>
 <h4>Titre niveau 4</h4>
-<p>Ce paragraphe doit avoir une taille de 32 px</p>
-<p>Ce paragraphe doit être en vert</p>
-<!--On peut aussi appliquer un style directement à l'intérieur de la balise HTML -->
-<p style="font-size: 24px;">Paragraphe</p>
-<div>
-    <p>La div (à l'intérieur de laquelle se trouve ce paragraphe) doit avoir un bordure verte de 2 px</p>
+<p style="font-size: 32px">Ce paragraphe doit avoir une taille de 32 px</p>
+<p class="green">Ce paragraphe doit être en vert</p>
+
+<div style="border: 2px solid green">
+    <p>La div (à l'intérieur de laquelle se trouve ce paragraphe) doit avoir une bordure verte de 2 px</p>
 </div>
 <a href="https://www.google.com">Ceci lien doit être orange lorsqu'il est survolé, sinon, il reste noir</a>
 <ul>
