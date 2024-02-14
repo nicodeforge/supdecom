@@ -7,15 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quelques balises</title>
 </head>
+<style>
+    h1{
+        font-weight: 400;
+    }
+
+    a{
+        color: black;
+    }
+    a:hover{
+        color: orange;
+    }
+    .text-blue{
+        color: blue;
+    }
+
+    .underline{
+        text-decoration: underline;
+    }
+    .text-orange{
+        color: orange;
+    }
+
+</style>
 <body>
-<h1>Passez ce titre en bleu, et supprimer le gras</h1>
-<h2>Passez ce titre en bleu, et souligné</h2>
-<h3>Passez ce titre en orange, et souligné</h3>
+<h1 class="text-blue">Passez ce titre en bleu, et supprimer le gras</h1>
+<h2 class="text-blue underline">Passez ce titre en bleu, et souligné</h2>
+<h3 class="text-orange underline">Passez ce titre en orange, et souligné</h3>
 <h4>Titre niveau 4</h4>
-<p>Ce paragraphe doit avoir une taille de 32 px</p>
-<p>Ce paragraphe doit être en orange</p>
-<p >Paragraphe avec une taille de 14 px</p>
-<div>
+<p style="font-size: 32px;">Ce paragraphe doit avoir une taille de 32 px</p>
+<p class="text-orange">Ce paragraphe doit être en orange</p>
+<p  style="font-size: 14px;">Paragraphe avec une taille de 14 px</p>
+<div style="border: solid 2px green;">
     <p>La div (à l'intérieur de laquelle se trouve ce paragraphe) doit avoir un bordure verte de 2 px</p>
 </div>
 <div>
